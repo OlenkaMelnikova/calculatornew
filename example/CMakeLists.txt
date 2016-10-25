@@ -1,4 +1,3 @@
-7 lines (5 sloc)  181 Bytes
 cmake_minimum_required(VERSION 2.8)
 
 project (calculatornew_example)
