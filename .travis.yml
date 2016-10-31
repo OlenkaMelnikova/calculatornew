@@ -4,6 +4,7 @@ os:
 matrix:
   include:
     - os: windows
+       - os: linux
       env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
       addons:
         apt:
@@ -16,3 +17,4 @@ script:
 - mkdir build
 - cd build
 - cmake .. && make
+
