@@ -1,6 +1,5 @@
 #include <iostream>
-
-#include "calculatornew.hpp"
+#include "calculator.hpp"
 using namespace std;
 
 int main()
