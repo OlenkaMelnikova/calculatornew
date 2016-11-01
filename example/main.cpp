@@ -7,12 +7,12 @@ int main()
 {
     float a, b;
     
-double sum(float a, float b);
-double sub(float a, float b); 
-double pow1(float a, float b);
-double dev(float a, float b);
-double involution(float a, float b);
-double sqrt1(float a);
+float sum(float a, float b);
+float sub(float a, float b); 
+float pow1(float a, float b);
+float dev(float a, float b);
+float involution(float a, float b);
+float sqrt1(float a);
        
     setlocale(LC_ALL,"rus");
     
