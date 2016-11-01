@@ -21,12 +21,12 @@ float sqrt1(float a);
     cout<< "Введите значение b\n ";
     cin >> b;
     
-   cout<<"\nCумма равна: " << sum(a,b);
-   cout<<"\nРазность равна: "<< sub(a,b);
-   cout<<"\nПроизведение равно: "<< multiplication(a,b);
-   cout<<"\nЧастное равно: "<< dev(a,b);
-   cout<<"\na в степени c равно: "<< involution(a,b);
-   cout<<"\nквадратный корень из c равен: "<<sqrt1(a) ;
+   cout<<"\nresult1= " << sum(a,b);
+   cout<<"\nresult2= "<< sub(a,b);
+   cout<<"\nresult3="<< multiplication(a,b);
+   cout<<"\nresult4="<< dev(a,b);
+   cout<<"\nresult5="<< involution(a,b);
+   cout<<"\nresult6= "<<sqrt1(a) ;
   
     
     
