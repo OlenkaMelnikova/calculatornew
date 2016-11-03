@@ -11,7 +11,7 @@ matrix:
           packages:
             - g++-5
           sources: &sources
-            - llvm-toolchain-precise-3.8
+            - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
 script:
 - mkdir build
