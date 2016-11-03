@@ -6,7 +6,7 @@ project (calculatornew)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(HEADERS ${PROJECT_SOURCE_DIR}/include/calculator.hpp)
-set(HEADERS ${PROJECT_SOURCE_DIR}/include/catch.cpp)
+set(HEADERS ${PROJECT_SOURCE_DIR}/include/catch.hpp)
 set(SOURCES ${PROJECT_SOURCE_DIR}/sources/calculator.cpp)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
