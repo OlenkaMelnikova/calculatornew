@@ -31,7 +31,5 @@ float sqrt1(float a);
     cout<<"\nквадратный корень из c равен: "<<sqrt1(a) ;
 
   
- 
-    
-     return 0;
+ system("pause");
 }
