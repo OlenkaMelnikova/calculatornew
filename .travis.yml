@@ -1,16 +1,10 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- - rbx-2
-# uncomment and edit the following line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+language: generic
 os:
 - osx
 matrix:
   include:
-    - os: windows
-       - os: linux
+    - os: linux
+      - os: windows
       env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
       addons:
         apt:
@@ -23,4 +17,3 @@ script:
 - mkdir build
 - cd build
 - cmake .. && make
-
