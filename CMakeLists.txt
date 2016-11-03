@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 2.8)
 
 project (calculatornew)
@@ -17,4 +18,3 @@ add_library (${PROJECT_NAME} STATIC ${SOURCES})
 
 add_subdirectory(tests)
 add_subdirectory(example)
-
