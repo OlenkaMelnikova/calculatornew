@@ -4,7 +4,7 @@ set(TESTS_FOR_PROJECT Calculatornew)
 
 project(${TESTS_FOR_PROJECT}_tests)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++15")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 option(BUILD_SHARED_LIBS "Build shared instead of static library" OFF)
 
