@@ -18,4 +18,3 @@ add_library (${PROJECT_NAME} STATIC ${SOURCES})
 add_subdirectory(tests)
 add_subdirectory(example)
 
-
