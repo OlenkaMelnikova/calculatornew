@@ -2,9 +2,11 @@
 #include "calculator.hpp"
 using namespace std;
 
-int main()
-{
-    float a, b;
+int main() {
+
+        float a;
+        float b;
+        
     
 float sum(float a, float b);
 float sub(float a, float b); 
