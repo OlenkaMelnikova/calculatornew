@@ -12,4 +12,7 @@ matrix:
           sources: &sources
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
-sources: *sources
+script:
+- mkdir build
+- cd build
+- cmake .. && make
