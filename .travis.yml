@@ -1,6 +1,5 @@
 language: generic
-os:
--osx
+os:osx
 matrix:
   include:
       - os: windows
