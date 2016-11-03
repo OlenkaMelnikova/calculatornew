@@ -1,6 +1,5 @@
 language: generic
-os:
-- osx
+os:osx
 matrix:
   include:
       - os: windows
@@ -16,4 +15,4 @@ matrix:
 script:
 - mkdir build
 - cd build
-- cmake .. && make
+
