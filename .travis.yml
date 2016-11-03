@@ -3,7 +3,6 @@ os:
 - osx
 matrix:
   include:
-    - os: linux
       - os: windows
       env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
       addons:
