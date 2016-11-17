@@ -35,7 +35,7 @@ SCENARIO("calculator dev", "[dev]") {
 }
 SCENARIO("calculator involution", "[involution]") {
     float a = 4.0;
-    float b = 8.0;
+    unsigned int b = 8.0;
     
    float  rv = involution( a, b );
     
