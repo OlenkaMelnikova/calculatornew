@@ -16,10 +16,10 @@ float dev(float a, float b)
 	if (b != 0) return a / b;
 	else return 0;
 }
-float involution(float a, float b)
+float involution(float a, unsigned int b)
 {
-	float result = a;
-	for (int i = 1; i <b; i++)
+	float result = 1;
+	for (int i = 0; i <b; i++)
 	{
 		result *= a;
 	}
