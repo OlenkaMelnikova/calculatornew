@@ -19,7 +19,7 @@ float dev(float a, float b)
 float involution(float a, float b)
 {
 	float result = 1;
-	for (int i = 0; i <b; i++)
+	for (unsigned int i = 0; i <b; ++i)
 	{
 		result *= a;
 	}
