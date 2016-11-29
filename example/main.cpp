@@ -6,16 +6,6 @@ int main() {
 
         float a;
         float b;
-        
-    
-float sum(float a, float b);
-float sub(float a, float b); 
-float pow1(float a, float b);
-float dev(float a, float b);
-float involution(float a, float b);
-float sqrt1(float a);
-       
-    setlocale(LC_ALL,"rus");
     
     cout<< "Введите значение a\n ";
     cin >> a;
