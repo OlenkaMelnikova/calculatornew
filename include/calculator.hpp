@@ -1,6 +1,6 @@
-float sum(float a, float b);
-float sub(float a, float b);
-float pow1(float a, float b);
-float dev(float a, float b);
-float involution(float a, float b);
-float sqrt1(float a);
+double sum(double a, double b);
+double sub(double a, double b);
+double pow1(double a, double b);
+double *dev(double a, double b);
+double *sqrt1(double a);
+double involution(double a, double b);
