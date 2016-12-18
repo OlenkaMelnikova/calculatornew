@@ -2,51 +2,54 @@
 #include <catch.hpp>
 
 SCENARIO("calculator sum", "[sum]") {
-    float a = 4.0;
-    float b = 8.0;
+    double a = 5.0;
+    double b = 8.0;
+    int c = 2;
+    double rv = sum( a, b );
     
-    float rv = sum( a, b );
-    
-	REQUIRE( rv == 12.0 );
+	REQUIRE( rv == 13.0 );
 }
 SCENARIO("calculator sub", "[sub]") {
-    float a = 4.0;
-    float b = 8.0;
-    
+    double a = 5.0;
+    double b = 8.0;
+    int c = 2;
     float rv = sub( a, b );
     
-	REQUIRE( rv == -4.0 );
+	REQUIRE( rv == -3.0 );
 }
 SCENARIO("calculator pow1", "[pow1]") {
-    float a = 4.0;
-    float b = 8.0;
+    double a = 5.0;
+    double b = 8.0;
+    int c = 2;
     
     float rv = pow1( a, b );
     
-	REQUIRE( rv == 32.0 );
+	REQUIRE( rv == 40.0 );
 }
 SCENARIO("calculator dev", "[dev]") {
-    float a = 4.0;
-    float b = 8.0;
+    double a = 5.0;
+    double b = 0;
+    int c = 2;
     
-    float rv = dev( a, b );
+    double *rv = dev( a, b );
     
-	REQUIRE( rv == 0.5 );
+	REQUIRE( rv == nullptr );
 }
 SCENARIO("calculator involution", "[involution]") {
-    float a = 4.0;
-    float b = 8.0;
+    double a = 5.0;
+    double b = 8.0;
+    int c = -2;
     
-   float  rv = involution( a, b );
+    double rv = involution( a, c );
     
-	REQUIRE( rv == 65536.0 );
+	REQUIRE( rv == 0.04 );
 }
 SCENARIO("calculator sqrt1", "[sqrt1]") {
-    float a = 4.0;
-    float b = 8.0;
+   double a = -5;
+    double b = 8.0;
+    int c = 2;	
     
-    float rv = sqrt1( a, b );
-    
-	REQUIRE( rv == 2.0 );
-
+    double *rv = sqrt1( a );
+    	
+REQUIRE( rv == nullptr );
 }
