@@ -1,44 +1,66 @@
-float sum(float a, float b)
+double sum(double a, double b)
 {
 	return a + b;
 }
-float sub(float a, float b)
+double sub(double a, double b)
 {
 	return a - b;
 }
 
-float pow1(float a, float b)
+double pow1(double a, double b)
 {
 	return a*b;
 }
-float dev(float a, float b)
-{
-	if (b != 0) return a / b;
-	else return 0;
-}
-float involution(float a, float b)
-{
-	float result = 1;
-	for (unsigned int i = 0; i <b; ++i)
+double * dev(double a, double b)
+{	
+	if (b!=0)
 	{
-		result *= a;
+	        double *p = new double;
+		*p = a / b;
+		return p;
 	}
-
-	return result;
+	else return nullptr;
 }
-float sqrt1(float a)
-{
-	if (a <= 0)
-		return 0;
-	else
-	{
-		double c;
-		c = 1;
-		while (c*c != a)
-		{
-			c = 1. / 2 * (c + a / c);
-		}
-		return c;
-	}
+double involution(double a, int c)
+{	
+        double a1 = 1;	
+        if (c>0)		
+                for (int i = 0; i < c; i++)		
+                        a1 = a1*a;	
+        if (c<0)	
+                for (int i = 0; i < (-c); i++)			
+                        a1 = a1 / a;
+        return a1;
+}
 
+double *sqrt1(double a)
+{ 
+	double c = 0, res = a;
+        if (a > 0)
+	{
+	       double *r = new double;
+	       if (a != 1 && a != 0)
+	       {
+	            while (c - res > 0.00001 || c - res < -0.00001)
+		    {
+		         c = res;
+		         res = (c + a / res) / 2;
+		    }
+	            *r = res;
+	       }
+	       else if (a == 1) *r = 1;
+     	       else if (a == 0) *r = 0;
+	return r;	
+	}
+	else return nullptr;
+}	
+double absolut(double a)
+{	
+        return ((a >= 0) ? a : -a);
+}
+double roundp(double a)
+{	
+        if (a < 0)
+                a = -absolut(a);
+        return a;
 }
