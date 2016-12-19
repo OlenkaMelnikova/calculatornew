@@ -8,10 +8,11 @@ int main() {
         double b;
         int c;	
     
-    cout<< "Введите значение a\n ";
+    cout << "Enter value a\n ";
     cin >> a;
-    cout<< "Введите значение b\n ";
+    cout << "Enter value b\n ";
     cin >> b;
+    cout << "Enter value c\n ";
     cin >> c;
     cout << roundp(sum(a, b)) << endl;	
     cout << roundp(sub(a, b)) << endl;	
