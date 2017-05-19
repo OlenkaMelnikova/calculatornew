@@ -2,6 +2,12 @@
 #include <catch.hpp>
 
 
+SCENARIO("complex init") 
+{
+	TComplex complex;
+	REQUIRE(complex.real_() == 0);
+	REQUIRE(complex.imaginary_() == 0);
+}
 SCENARIO("param") 
 {
 	complex a(2, 2);
