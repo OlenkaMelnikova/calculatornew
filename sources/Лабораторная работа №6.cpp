@@ -1,36 +1,4 @@
-// Лабораторная работа №6.cpp: определяет точку входа для консольного приложения.
-//
-
-#include "stdafx.h"
-#include <iostream>
-#include <cstdlib>
-using namespace std;
-
-class complex_number
-{
-private:
-	double real, image;
-public:
-	complex_number();
-	complex_number(double a, double b);
-	complex_number(const complex_number &ob);
-	double real_()const;
-	double image_()const;
-	complex_number operator+=(const complex_number &ob);
-	complex_number operator=(const complex_number &ob);
-	complex_number operator-=(const complex_number &ob);
-	complex_number operator * (const complex_number &ob)const;
-	complex_number operator / (const complex_number &ob)const;
-	complex_number mult(int k)const;
-	complex_number dif(complex_number c)const;
-	complex_number add(complex_number c)const;
-	complex_number mydiv(int l)const;
-	complex_number &operator /= (const complex_number &ob);
-	complex_number &operator *= (const complex_number &ob);
-	bool operator == (const complex_number &ob)const;
-	friend ostream &operator<<(ostream &stream, const complex_number &ob);
-	friend istream &operator>>(istream &stream, complex_number &ob);
-};
+#include "complex.hpp"
 
 complex_number::complex_number()
 {
@@ -136,20 +104,13 @@ ostream &operator << (ostream &stream, const complex_number &ob)
 
 istream &operator >> (istream &stream, complex_number &ob)
 {
-	cout << "Введите real комплексного числа : ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ real ГЄГ®Г¬ГЇГ«ГҐГЄГ±Г­Г®ГЈГ® Г·ГЁГ±Г«Г  : ";
 	stream >> ob.real;
-	cout << "Введите image комплексного числа : ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ image ГЄГ®Г¬ГЇГ«ГҐГЄГ±Г­Г®ГЈГ® Г·ГЁГ±Г«Г  : ";
 	stream >> ob.image;
 	return stream;
 }
-int main()
-{
-	double first, second, p;
-	cout << first;
-	cin >> first;
-	system("pause");
-	return 0;
-}
+
 
 
 
