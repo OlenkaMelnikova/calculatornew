@@ -1,55 +1,84 @@
-#include <calculator.hpp>
+#include <complex.hpp>
 #include <catch.hpp>
 
-SCENARIO("calculator sum", "[sum]") {
-    double a = 5.0;
-    double b = 8.0;
-    int c = 2;
-    double rv = sum( a, b );
-    
-	REQUIRE( rv == 13.0 );
+
+SCENARIO("param") 
+{
+	complex a(2, 2);
+	REQUIRE(a.im() == 2);
+	REQUIRE(a.re() == 2);
 }
-SCENARIO("calculator sub", "[sub]") {
-    double a = 5.0;
-    double b = 8.0;
-    int c = 2;
-    float rv = sub( a, b );
-    
-	REQUIRE( rv == -3.0 );
+
+SCENARIO("copy")
+{
+	complex a (4, 4), b(a);	
+	REQUIRE(a.im() ==b.im());
+	REQUIRE(a.re() == b.re());
+	
 }
-SCENARIO("calculator pow1", "[pow1]") {
-    double a = 5.0;
-    double b = 8.0;
-    int c = 2;
-    
-    float rv = pow1( a, b );
-    
-	REQUIRE( rv == 40.0 );
+
+SCENARIO("+")
+{
+	complex a (4, 4), b(a);
+	complex c(8, 8);
+	b+=a;
+	REQUIRE(b== c);
 }
-SCENARIO("calculator dev", "[dev]") {
-    double a = 5.0;
-    double b = 0;
-    int c = 2;
-    
-    double *rv = dev( a, b );
-    
-	REQUIRE( rv == nullptr );
+
+SCENARIO("*") 
+{
+	complex b(3, 3), a(1,1), c(0,6);
+	b*=a;
+	REQUIRE(b==c);
 }
-SCENARIO("calculator involution", "[involution]") {
-    double a = 5.0;
-    double b = 8.0;
-    int c = -2;
-    
-    double rv = involution( a, c );
-    
-	REQUIRE( rv == 0.04 );
+
+SCENARIO("/") 
+{
+	complex b(3, 3), a(9,9), c(3, 0);
+	a/=b;
+	REQUIRE(a==c);
 }
-SCENARIO("calculator sqrt1", "[sqrt1]") {
-   double a = -5;
-    double b = 8.0;
-    int c = 2;	
-    
-    double *rv = sqrt1( a );
-    	
-REQUIRE( rv == nullptr );
+
+SCENARIO("==") 
+{
+	complex a(4, 3);
+	complex b (a);
+	REQUIRE(a == b);
+}
+
+SCENARIO("=") {
+	complex a(7, 5);
+	complex f = a;
+	REQUIRE(f == a);
+}
+
+SCENARIO("-") {
+	complex a(5, 4), b(3, 3), f(2, 1);
+	a-=b;
+	REQUIRE(f == a);
+}
+SCENARIO("add")
+{
+	complex a (4, 4), b(a);
+	complex c(8, 8);
+	b=b.add(a);
+	REQUIRE(b== c);
+}
+SCENARIO("mult") 
+{
+	complex b(3, 3), c(9,9);
+	b=b.mult(3);
+	REQUIRE(b==c);
+}
+
+SCENARIO("mydiv") 
+{
+	complex b(3, 3), c(1,1);
+	b=b.mydiv(3);
+	REQUIRE(b==c);
+}
+SCENARIO("dif") {
+	complex a(9, 9), b(3, 3), f(6, 6);
+	a=a.dif(b);
+	REQUIRE(f == a);
 }
