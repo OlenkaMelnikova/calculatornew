@@ -23,14 +23,14 @@ double complex_number::image_()const
 {
 	return image;
 }
-complex_number complex_number :: operator+=(const complex_number &ob)
+complex_number &complex_number :: operator+=(const complex_number &ob)
 {
 
 	real += ob.real;
 	image += ob.image;
 	return *this;
 }
-complex_number complex_number :: operator=(const complex_number &ob)
+complex_number &complex_number :: operator=(const complex_number &ob)
 {
 	if (&ob == this) return *this;
 	real = ob.real;
@@ -38,7 +38,7 @@ complex_number complex_number :: operator=(const complex_number &ob)
 	return *this;
 }
 
-complex_number complex_number :: operator-=(const complex_number &ob)
+complex_number &complex_number :: operator-=(const complex_number &ob)
 {
 	
 	real -= ob.real;
