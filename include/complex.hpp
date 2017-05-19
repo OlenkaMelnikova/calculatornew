@@ -12,9 +12,9 @@ public:
 	complex_number(const complex_number &ob);
 	double real_()const;
 	double image_()const;
-	complex_number operator+=(const complex_number &ob);
-	complex_number operator=(const complex_number &ob);
-	complex_number operator-=(const complex_number &ob);
+	complex_number &operator+=(const complex_number &ob);
+	complex_number &operator=(const complex_number &ob);
+	complex_number &operator-=(const complex_number &ob);
 	complex_number operator * (const complex_number &ob)const;
 	complex_number operator / (const complex_number &ob)const;
 	complex_number mult(int k)const;
